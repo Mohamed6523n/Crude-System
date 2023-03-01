@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Crude </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/sty.css">
+
+</head>
+
+<body>
+    <div class="w-75 m-auto p-5 shadow-lg my-5">
+        <h1 class="fw-bold pb-5 text-center">CRUD SYSTEM</h1>
+
+        <label>Produect Name  </label>
+        <input type="text" class="form-control mb-5" onblur="prodNameValidat()" id="prodName">
+        <label> Produect Category</label>
+        <input type="text" class="form-control mb-5" id="prodcat">
+        <label> Produect Price</label>
+        <input type="text" class="form-control mb-5" id="prodpric">
+        <label> Produect Description</label>
+        <textarea name="" class="form-control mb-5" id="desc" rows="1"></textarea>
+        <div id="alertInput" class="alert d-none alert-danger text-center" role="alert">
+            <p class="mb-0">Enter A valide Data</p>
+        </div>
+        <button class="btn btn-primary px-4 " id="addBtn" onclick="creatprodect()">Add proudect</button>
+        <button class="btn btn-danger px-4 " onclick="reset() ">clear</button>
+
+    </div>
+
+    <input type="text" id="searchporduct" onkeyup="searchProd()" placeholder="search"
+        class="w-50 shadow-lg m-auto form-control">
+
+    <table class="table w-75 m-auto my-5">
+        <thead>
+            <th>Number</th>
+            <th>name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+
+
+        </tbody>
+
+    </table>
+
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
